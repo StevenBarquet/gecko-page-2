@@ -1,0 +1,81 @@
+/* -------------Pre sets----------------- */
+
+@font-face {
+    font-family: 'IntroBookAlt';
+    src: url('./fonts/IntroBookAlt/IntroBookAltRegular.otf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'BebasNeue';
+    src: url('./fonts/Bebas/BebasNeueRegular.otf');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @import '~antd/dist/antd.css';
+
+
+/* ------------------------Navbar------------------ */
+#menu
+{
+  background-color: rgb(0, 0, 0, .3);
+  padding: 10px;
+  font-size: 20px;
+}
+#menu a
+{
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-variant: small-caps;
+  text-decoration: none;
+}
+#menu a:hover
+{
+  color: white;
+  z-index: 2;
+}
+.nav-buttons{
+    display: inline-block;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.nav-buttons:hover .nav-hover{
+    width: 100%;
+}
+.nav-hover{
+    margin-top:5px;
+    display: block;
+    width: 0%;
+    height: 4px;
+    background: white;
+    -webkit-transition: width 0.7s; /* For Safari 3.1 to 6.0 */
+    transition: width 0.7s;
+}
+.logo_container
+{
+    display: inline-block;
+    margin-right: 40px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+}
+.menu_container{
+    width: 570px;
+    margin-right: auto;
+    margin-left: auto;
+    /*Centrado horizontal de elementos*/
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+ }
+/* ------------------------Home-Banner---------------------- */
+.homeBanner{
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+  }
