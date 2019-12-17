@@ -4,7 +4,7 @@
   "description": "gecko2",
   "main": "index.js",
   "scripts": {
-    "build-babel-example": "webpack-dev-server --config ./webpack-configurations/babel-example/webpack.config.js"
+    "start": "webpack-dev-server --config ./webpack-configurations/babel-example/webpack.config.js"
   },
   "keywords": [
     "webpack"
