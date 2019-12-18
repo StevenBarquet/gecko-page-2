@@ -45,7 +45,32 @@
 
   @import '~antd/dist/antd.css';
 
+/* -------------------------tema---------------------------- */
+h1{
+  font-size: 24;
+  font-family: 'Roboto Condensed Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h1 span{
+  color: #fdbc62;
+  text-shadow: 1.5px 1.5px #1a1a1a;
+}
+h3{
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Roboto Condensed Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-top: 25px;
+  color: #fdbc62;
+}
 
+h6{
+  font-size: 13px;
+  color: #242424;
+  padding-left: 10px;
+  font-family: 'Roboto Light','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.text-center{
+  text-align: center;
+}
 /* ------------------------Navbar------------------ */
 #menu
 {
@@ -117,6 +142,7 @@
   font-family: 'Roboto Condensed Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   width: 45%;
   margin: 50px 0px 120px 20px; 
+  text-align: left;
   /* top margin is 25px
   right margin is 50px
   bottom margin is 75px
@@ -148,25 +174,42 @@
   font-size: 24px;
 }
 
-/* ---------------------------Body------------------------- */
+/* -----------------------------------------------------Body---------------------------------------------------- */
 body{
 background: #1a1a1a;
 font-family: 'Roboto Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .home-body{
   width: 88%;
-  height: 100px;
-  background: #ffffff;
   margin-right: auto;
   margin-left: auto;
-  border: 2px solid #fd9155;
+  /* border: 2px solid #fd9155; */
+  background: rgba(255,255,255,1);
+  background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,195,56,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(255,195,56,1)));
+  background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,195,56,1) 100%);
+  background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,195,56,1) 100%);
+  background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,195,56,1) 100%);
+  background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,195,56,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffc338', GradientType=1 );
 }
-h1{
-  font-size: 24;
-  text-align: center;
-  font-family: 'Roboto Condensed Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+/* ---------------------img---------------------- */
+.grow-img-container{
+  width: 200px;
+  margin-top: 30px;
 }
-span{
-  color: #fdbc62;
-  text-shadow: 1.5px 1.5px #1a1a1a;
+.grow-img-container img{
+  animation:  3000ms latido infinite;
+}
+
+@keyframes latido {
+  0%{
+      transform: scale(1.05);
+  }
+  50% {
+      transform: scale(1);
+  }
+  100% {
+      transform: scale(1.05);
+  }
 }

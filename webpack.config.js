@@ -17,13 +17,14 @@ module.exports = {
     devServer: {
         hot: true,
         port: 3000,
-        open: true
+        open: true,
+        disableHostCheck: true,   // That solved it
     },
     //aqui van los loaders
     module: { 
         rules: [
             {
-                test: /\.js$/,
+                test: /\.js|jsx$/,
                 use: 'babel-loader',  // incluir babel
                 exclude: /node_modules/ // excluye esa carpeta
             },
