@@ -12,13 +12,13 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'), // Genera ruta dependiendo tu SO, dist es una convencion donde van los js compilados
         //filename: 'papu-bundle-[name].js'
-        filename: 'js/[name].js' // name corresponde a los nombres key de el objeto entry
+        filename: 'bundle.js' // name corresponde a los nombres key de el objeto entry
     },
-    // devServer: {
-    //     hot: true,
-    //     port: 3000,
-    //     open: true
-    // },
+    devServer: {
+        hot: true,
+        port: 3000,
+        open: true
+    },
     //aqui van los loaders
     module: { 
         rules: [
