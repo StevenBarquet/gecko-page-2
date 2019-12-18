@@ -4,7 +4,8 @@
   "description": "gecko2",
   "main": "index.js",
   "scripts": {
-    "start-dev": "webpack-dev-server --config ./webpack.config.js"
+    "start-dev": "webpack-dev-server --config ./webpack.config.js  --open --hot --host 0.0.0.0",
+    "local-dev": "webpack-dev-server --config ./webpack.config.js"
   },
   "keywords": [
     "webpack"
