@@ -14,11 +14,11 @@ module.exports = {
         //filename: 'papu-bundle-[name].js'
         filename: 'js/[name].js' // name corresponde a los nombres key de el objeto entry
     },
-    devServer: {
-        hot: true,
-        port: 3000,
-        open: true
-    },
+    // devServer: {
+    //     hot: true,
+    //     port: 3000,
+    //     open: true
+    // },
     //aqui van los loaders
     module: { 
         rules: [
