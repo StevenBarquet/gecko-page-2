@@ -5,6 +5,7 @@ import { Col, Row, Button } from 'antd'
 
 //Componentes
 import GrowImg from './GrowImg.jsx'
+import TechIcon from './TechIcon.jsx'
 
 //imagenes
 import Background from '../../../../imagenes/home/bannerh.jpg'
@@ -14,6 +15,7 @@ import presencia from '../../../../imagenes/home/presentacion-web.png'
 import negocio from '../../../../imagenes/home/negocio-web.png'
 import empresa from '../../../../imagenes/home/empresa-web.png'
 import mas from '../../../../imagenes/home/evoluciona-web.png'
+import reactLogo from '../../../../imagenes/home/tech/react.png'
 
 function Home(){
     return(
@@ -22,7 +24,7 @@ function Home(){
             <h1><div>GE<span>CK</span>O</div> se especializa en el <span>crecimiento</span> de tu negocio en <div>internet.</div></h1>
             <h2>Utilizamos marketing para que llegues a <div>millones</div> de personas y las tecnologías más avanzadas en el desarrollo de software para que <div>trabaje por ti</div></h2>
         </div>
-        <div className="homeBanner"><img src={Background} alt="Gecko Logo" width="100%"/> </div>
+        <div className="homeBanner"><img src={Background} alt="Gecko Logo" width="100%"/></div>
         <div className="home-body">
             <Row>
               <Col sm={24}>
@@ -57,13 +59,45 @@ function Home(){
             </Row>
         </div>
         <Row>
-                <Col sm={12}>
-                    <h3 style={{textAlign: 'center'}} >Tecnologías de desarrollo</h3>
-                </Col>
-                <Col sm={12}>
-                    <h3 style={{textAlign: 'center'}} >Tecnologías y técnicas de marketing</h3>
-                </Col>
-            </Row>
+            <Col sm={12}>
+                <Row className="tech-titles" >
+                    <h3>Tecnologías de desarrollo</h3>
+                </Row>
+                <Row>
+                    <Col sm={12}>
+                        <TechIcon src={reactLogo} label="React" />
+                    </Col>
+                    <Col sm={12}>
+                        <TechIcon src={reactLogo} label="React" />
+                    </Col>
+                    <Col sm={12}>
+                        <TechIcon src={reactLogo} label="React" />
+                    </Col>
+                    <Col sm={12}>
+                        <TechIcon src={reactLogo} label="React" />
+                    </Col> 
+                </Row>
+            </Col>
+            <Col sm={12}>
+                <Row className="tech-titles" >
+                    <h3>Tecnologías y técnicas de marketing</h3>
+                </Row>
+                <Row>
+                    <Col sm={12}>
+                        <TechIcon src={reactLogo} label="React" />
+                    </Col>
+                    <Col sm={12}>
+                        <TechIcon src={reactLogo} label="React" />
+                    </Col>
+                    <Col sm={12}>
+                        <TechIcon src={reactLogo} label="React" />
+                    </Col>
+                    <Col sm={12}>
+                        <TechIcon src={reactLogo} label="React" />
+                    </Col> 
+                </Row>
+            </Col>
+        </Row>
       </React.Fragment>   
     )
 }

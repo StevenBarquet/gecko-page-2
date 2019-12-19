@@ -55,21 +55,17 @@ h1 span{
   text-shadow: 1.5px 1.5px #1a1a1a;
 }
 h3{
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 22px;
   font-family: 'Roboto Condensed Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  margin-top: 25px;
   color: #fdbc62;
 }
 
 h6{
   font-size: 13px;
+  font-weight: bold;
   color: #242424;
   padding-left: 10px;
   font-family: 'Roboto Light','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-.text-center{
-  text-align: center;
 }
 /* ------------------------Navbar------------------ */
 #menu
@@ -193,13 +189,43 @@ font-family: 'Roboto Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Gra
   background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,195,56,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffc338', GradientType=1 );
 }
-/* ---------------------img---------------------- */
+/* ---------------------Grow---------------------- */
 .grow-img-container{
   width: 200px;
   margin-top: 30px;
 }
 .grow-img-container img{
   animation:  3000ms latido infinite;
+}
+/* ------------------footer-------------------- */
+.tech-titles{
+  margin-top: 25px;
+  text-align: center;
+}
+.tech-container{
+  background: #ffffff;
+  width: 100px;
+  height: 100px;
+  box-shadow: 6px 6px 3px 0px rgba(0,0,0,0.75);
+  margin-bottom: 25px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 1.5px;
+  cursor: pointer;
+}
+.tech-img-container{
+  padding-top: 6px;
+  width: 60px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.tech-container:hover{
+  transform: scale(1.05);
+}
+.tech-container p{
+  font-size: 18;
+  color: #303030;
+  text-align: center;
 }
 
 @keyframes latido {
