@@ -13,7 +13,8 @@ const GrowImg = (props) =>{
             <div className="grow-img-container" >
                 <img src={src} alt="idea" width="100%"/>
             </div>
-            <h6>{label}</h6>  
+            <h6>{label}</h6>
+            <div className="grow-bottom-bar" />
         </div>
     )
 }

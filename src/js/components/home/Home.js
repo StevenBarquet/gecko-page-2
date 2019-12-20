@@ -58,7 +58,8 @@ import reduxLogo from '../../../../imagenes/home/tech/small/reduxLogo.png'
 import spring from '../../../../imagenes/home/tech/small/spring.png'
 import ubuntu from '../../../../imagenes/home/tech/small/ubuntu.png'
 import webpack from '../../../../imagenes/home/tech/small/webpack.png'
-
+import digitalOcean from '../../../../imagenes/home/tech/small/digitalOcean.png'
+import npmLogo from '../../../../imagenes/home/tech/small/npmLogo.png'
 
 
 function Home(){
@@ -122,17 +123,17 @@ function Home(){
                     <h3>Tecnologías y técnicas de marketing</h3>
                 </Row>
                 <Row className="ml-3">
-                    <Col sm={4}>
+                    <Col align="middle" sm={4}>
                         <TechIcon src={reactLogo} label="React" />
                     </Col>
-                    <Col sm={4}>
-                        <TechIcon src={reactLogo} label="React" />
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={bootstrap} label="React" />
                     </Col>
-                    <Col sm={4}>
-                        <TechIcon src={reactLogo} label="React" />
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={android} label="React" />
                     </Col>
-                    <Col sm={4}>
-                        <TechIcon src={reactLogo} label="React" />
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={docker} label="React" />
                     </Col> 
                 </Row>
             </Col>
@@ -140,134 +141,133 @@ function Home(){
                 <Row className="tech-titles" >
                     <h3>Tecnologías de desarrollo</h3>
                 </Row>
-                <Row className="ml-3" >
-                    <Col sm={4}>
-                        <TechIcon src={bluemix} label="React" />
-                    </Col>
-                    <Col sm={4}>
-                        <TechIcon src={apache} label="React" />
-                    </Col>
-                    <Col sm={4}>
-                        <TechIcon src={aws} label="React" />
-                    </Col>
-                    <Col sm={4}>
-                        <TechIcon src={azure} label="React" />
-                    </Col>
-                    <Col sm={4}>
-                        <TechIcon src={android} label="React" />
-                    </Col> 
-                    <Col sm={4}>
-                        <TechIcon src={bitbucket} label="React" />
-                    </Col> 
-                    <Col sm={4}>
-                        <TechIcon src={bootstrap} label="React" />
-                    </Col>
-                    <Col sm={4}>
-                        <TechIcon src={centos} label="React" />
-                    </Col>
-                    <Col sm={4}>
-                        <TechIcon src={cssLogo} label="React" />
-                    </Col>
-                    <Col sm={4}>
-                        <TechIcon src={debian} label="React" />
-                    </Col>
-                    <Col sm={4}>
-                        <TechIcon src={django} label="React" />
-                    </Col> 
-                    <Col sm={4}>
-                        <TechIcon src={flask} label="React" />
-                    </Col> 
-                    <Col sm={4}>
-                        <TechIcon src={fedora} label="React" />
-                    </Col>
-                    <Col sm={4}>
-                        <TechIcon src={docker} label="React" />
-                    </Col>
-                    <Col sm={4}>
-                        <TechIcon src={aws} label="React" />
-                    </Col>
-                    <Col sm={4}>
-                        <TechIcon src={azure} label="React" />
-                    </Col>
-                    <Col sm={4}>
-                        <TechIcon src={git} label="React" />
-                    </Col> 
-                    <Col sm={4}>
-                        <TechIcon src={github} label="React" />
-                    </Col> 
-                    <Col sm={4}>
-                        <TechIcon src={gitlab} label="React" />
-                    </Col>
-                    <Col sm={4}>
-                        <TechIcon src={heroku} label="React" />
-                    </Col>
-                    <Col sm={4}>
+                <Row>
+                    <Col align="middle" sm={4}>
                         <TechIcon src={html5} label="React" />
                     </Col>
-                    <Col sm={4}>
-                        <TechIcon src={ibmCloud} label="React" />
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={cssLogo} label="React" />
                     </Col>
-                    <Col sm={4}>
-                        <TechIcon src={ibm} label="React" />
-                    </Col> 
-                    <Col sm={4}>
-                        <TechIcon src={java} label="React" />
-                    </Col> 
-                    <Col sm={4}>
-                        <TechIcon src={jenkins} label="React" />
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={npmLogo} label="React" />
+                    </Col>                                       
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={reactLogo} label="React" />
                     </Col>
-                    <Col sm={4}>
-                        <TechIcon src={jquery} label="React" />
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={native} label="React" />
                     </Col>
-                    <Col sm={4}>
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={android} label="React" />
+                    </Col>
+                </Row>  
+                <Row>
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={node} label="React" />
+                    </Col>
+                    <Col align="middle" sm={4}>
                         <TechIcon src={js} label="React" />
                     </Col>
-                    <Col sm={4}>
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={bluemix} label="React" />
+                    </Col>
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={apache} label="React" />
+                    </Col>
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={aws} label="React" />
+                    </Col>
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={azure} label="React" />
+                    </Col>                    
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={bitbucket} label="React" />
+                    </Col> 
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={bootstrap} label="React" />
+                    </Col>
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={centos} label="React" />
+                    </Col>                    
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={debian} label="React" />
+                    </Col>
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={django} label="React" />
+                    </Col> 
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={flask} label="React" />
+                    </Col> 
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={fedora} label="React" />
+                    </Col>
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={docker} label="React" />
+                    </Col>                    
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={git} label="React" />
+                    </Col> 
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={github} label="React" />
+                    </Col> 
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={gitlab} label="React" />
+                    </Col>
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={heroku} label="React" />
+                    </Col>                    
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={ibmCloud} label="React" />
+                    </Col>
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={ibm} label="React" />
+                    </Col> 
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={java} label="React" />
+                    </Col> 
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={jenkins} label="React" />
+                    </Col>
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={jquery} label="React" />
+                    </Col>
+                    <Col align="middle" sm={4}>
                         <TechIcon src={kubernetes} label="React" />
                     </Col>
-                    <Col sm={4}>
-                        <TechIcon src={mocha} label="React" />
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={digitalOcean} label="React" />
                     </Col> 
-                    <Col sm={4}>
+                    <Col align="middle" sm={4}>
                         <TechIcon src={mongo} label="React" />
                     </Col> 
-                    <Col sm={4}>
+                    <Col align="middle" sm={4}>
                         <TechIcon src={mysql} label="React" />
                     </Col> 
-                    <Col sm={4}>
-                        <TechIcon src={node} label="React" />
-                    </Col> 
-                    <Col sm={4}>
+                    <Col align="middle" sm={4}>
                         <TechIcon src={openshift} label="React" />
                     </Col> 
-                    <Col sm={4}>
+                    <Col align="middle" sm={4}>
                         <TechIcon src={postgres} label="React" />
                     </Col> 
-                    <Col sm={4}>
+                    <Col align="middle" sm={4}>
                         <TechIcon src={python} label="React" />
                     </Col> 
-                    <Col sm={4}>
+                    <Col align="middle" sm={4}>
                         <TechIcon src={rails} label="React" />
-                    </Col> 
-                    <Col sm={4}>
-                        <TechIcon src={native} label="React" />
-                    </Col> 
-                    <Col sm={4}>
-                        <TechIcon src={reactLogo} label="React" />
-                    </Col> 
-                    <Col sm={4}>
+                    </Col>                                          
+                    <Col align="middle" sm={4}>
                         <TechIcon src={redHat} label="React" />
                     </Col> 
-                    <Col sm={4}>
+                    <Col align="middle" sm={4}>
                         <TechIcon src={reduxLogo} label="React" />
                     </Col> 
-                    <Col sm={4}>
+                    <Col align="middle" sm={4}>
                         <TechIcon src={spring} label="React" />
                     </Col> 
-                    <Col sm={4}>
+                    <Col align="middle" sm={4}>
                         <TechIcon src={ubuntu} label="React" />
                     </Col> 
-                    <Col sm={4}>
+                    <Col align="middle" sm={4}>
                         <TechIcon src={webpack} label="React" />
                     </Col> 
                 </Row>
