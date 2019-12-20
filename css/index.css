@@ -47,26 +47,26 @@
 
 /* -------------------------tema---------------------------- */
 h1{
-  font-size: 24;
+  font-size: 24px;
   font-family: 'Roboto Condensed Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 h1 span{
-  color: #fdbc62;
+  color: #e99b2f;
   text-shadow: 1.5px 1.5px #1a1a1a;
 }
 h2{
-  font-size: 24;
+  font-size: 30px;
   font-family: 'Roboto Condensed Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: #ffffff;
 }
 h2 span{
-  color: #fdbc62;
+  color: #e99b2f;
   text-shadow: 1.5px 1.5px #1a1a1a;
 }
 h3{
-  font-size: 22px;
+  font-size: 30px;
   font-family: 'Roboto Condensed Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: #fdbc62;
+  color: #e99b2f;
 }
 
 h6{
@@ -81,6 +81,12 @@ h6{
 .center-box{
   margin-right: auto;
   margin-left: auto;
+}
+.whats-icon{
+  position: fixed; 
+  bottom: 20px; 
+  left: 10px; 
+  z-index: 2
 }
 /* ------------------------Navbar------------------ */
 #menu
@@ -170,7 +176,7 @@ h6{
   font-weight: bold;
 }
 .home-title h1 span{
-  color: #fdbc62;
+  color: #e99b2f;
   /* color: #fd9155; */
 }
 /* ---------------Sub-Title--------- */
@@ -178,7 +184,7 @@ h6{
   width: 75%;
   font-size: 30px;
   font-weight: bold;
-  color: #e69628;
+  color: #e99b2f;
   text-shadow: 2px 2px #1a1a1a;
 }
 .home-title h2 div{
