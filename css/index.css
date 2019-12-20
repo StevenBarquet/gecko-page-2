@@ -103,7 +103,7 @@ h6{
 }
 .nav-buttons{
     display: inline-block;
-    margin-left: 15px;
+    margin-left: 35px;
     cursor: pointer;
 }
 .nav-buttons:hover .nav-hover{
@@ -151,7 +151,7 @@ h6{
   
   display:  block;
   font-family: 'Roboto Condensed Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  width: 45%;
+  width: 58%;
   margin: 50px 0px 120px 20px; 
   text-align: left;
   /* top margin is 25px
@@ -160,8 +160,9 @@ h6{
   left margin is 100px */
 }
 .home-title h1{
-  font-size: 36px;
+  font-size: 46px;
   color: #ffffff;
+  font-weight: bold;
   text-shadow: 1.5px 1.5px #1a1a1a;
 }
 .home-title h1 div{
@@ -174,15 +175,17 @@ h6{
 }
 /* ---------------Sub-Title--------- */
 .home-title h2{
-  font-size: 21px;
-  color: #fdbc62;
+  width: 75%;
+  font-size: 30px;
+  font-weight: bold;
+  color: #e69628;
   text-shadow: 2px 2px #1a1a1a;
 }
 .home-title h2 div{
   display: inline-block;
   font-weight: bold;
   color: #ffffff;
-  font-size: 24px;
+  font-size: 34px;
 }
 
 /* -----------------------------------------------------Body---------------------------------------------------- */
@@ -194,7 +197,7 @@ font-family: 'Roboto Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Gra
   width: 88%;
   margin-right: auto;
   margin-left: auto;
-  padding-top: 200px;
+  padding-top: 50px;
   /* border: 2px solid #fd9155; */
 }
 /* ---------------------Grow---------------------- */

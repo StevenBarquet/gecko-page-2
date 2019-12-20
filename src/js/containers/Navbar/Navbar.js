@@ -14,15 +14,18 @@ const Navbar = (props) => (
             <div className="button-block">
                 <NavButton 
                     styles="nav-buttons" 
-                    label='Inicio'
+                    label='Inicio '
+                    iconType='home'
                     url="/"/>
                 <NavButton 
                     styles="nav-buttons" 
-                    label='Servicios'
+                    label='Servicios  '
+                    iconType='database'
                     url="/tareas"/>
                 <NavButton 
                     styles="nav-buttons" 
-                    label='¿Sabias que...?'
+                    label='¿Sabias que...?  '
+                    iconType='rise'
                     url="/sabias"/>
             </div>
     </div>

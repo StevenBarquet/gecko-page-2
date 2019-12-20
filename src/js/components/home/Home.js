@@ -122,7 +122,7 @@ function Home(){
                 <Row className="tech-titles" >
                     <h3>Tecnologías y técnicas de marketing</h3>
                 </Row>
-                <Row className="ml-3">
+                <Row >
                     <Col align="middle" sm={4}>
                         <TechIcon src={reactLogo} label="React" />
                     </Col>
@@ -159,9 +159,7 @@ function Home(){
                     </Col>
                     <Col align="middle" sm={4}>
                         <TechIcon src={android} label="React" />
-                    </Col>
-                </Row>  
-                <Row>
+                    </Col>                
                     <Col align="middle" sm={4}>
                         <TechIcon src={node} label="React" />
                     </Col>
