@@ -54,6 +54,15 @@ h1 span{
   color: #fdbc62;
   text-shadow: 1.5px 1.5px #1a1a1a;
 }
+h2{
+  font-size: 24;
+  font-family: 'Roboto Condensed Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #ffffff;
+}
+h2 span{
+  color: #fdbc62;
+  text-shadow: 1.5px 1.5px #1a1a1a;
+}
 h3{
   font-size: 22px;
   font-family: 'Roboto Condensed Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -61,11 +70,13 @@ h3{
 }
 
 h6{
-  font-size: 13px;
-  font-weight: bold;
+  font-size: 18px;
   color: #242424;
-  padding-left: 10px;
-  font-family: 'Roboto Light','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  letter-spacing: 2px;
+  font-family: 'Roboto Condensed Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.ml-3{
+  margin-left: 25px;
 }
 /* ------------------------Navbar------------------ */
 #menu
@@ -179,23 +190,36 @@ font-family: 'Roboto Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Gra
   width: 88%;
   margin-right: auto;
   margin-left: auto;
+  padding-top: 200px;
   /* border: 2px solid #fd9155; */
-  background: rgba(255,255,255,1);
-  background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,195,56,1) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(255,195,56,1)));
-  background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,195,56,1) 100%);
-  background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,195,56,1) 100%);
-  background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,195,56,1) 100%);
-  background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,195,56,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffc338', GradientType=1 );
 }
 /* ---------------------Grow---------------------- */
 .grow-img-container{
   width: 200px;
-  margin-top: 30px;
+  margin-top: 60px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .grow-img-container img{
   animation:  3000ms latido infinite;
+}
+.grow-container{
+  position: relative;
+  text-align: center;
+}
+.left-title-carousel{
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  font-size: 40px; 
+  font-weight: bold;
+  font-family: 'Roboto Condensed Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #000000;
+  z-index: 6;
+  /* top margin is 25px
+  right margin is 50px
+  bottom margin is 75px
+  left margin is 100px */
 }
 /* ------------------footer-------------------- */
 .tech-titles{
@@ -204,18 +228,21 @@ font-family: 'Roboto Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Gra
 }
 .tech-container{
   background: #ffffff;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 130px;
   box-shadow: 6px 6px 3px 0px rgba(0,0,0,0.75);
   margin-bottom: 25px;
   margin-right: auto;
   margin-left: auto;
   border-radius: 1.5px;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .tech-img-container{
   padding-top: 6px;
-  width: 60px;
+  width: 108px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -226,6 +253,14 @@ font-family: 'Roboto Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Gra
   font-size: 18;
   color: #303030;
   text-align: center;
+}
+
+/* For demo */
+.ant-carousel .slick-slide {
+  height: 350px;
+  line-height: 100px;
+  background: #e0b730;
+  overflow: hidden;
 }
 
 @keyframes latido {

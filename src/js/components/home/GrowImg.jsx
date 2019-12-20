@@ -6,10 +6,10 @@ import React from 'react';
 //Componentes
 
 const GrowImg = (props) =>{
-    const {src, label, margin} = props
-    const style = {marginLeft: margin}
+    const {src, label, span, title} = props
     return(
-        <div style={style}>
+        <div className="grow-container">
+            <div className="left-title-carousel" >{title}</div>
             <div className="grow-img-container" >
                 <img src={src} alt="idea" width="100%"/>
             </div>
