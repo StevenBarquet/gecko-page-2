@@ -16,7 +16,7 @@ import negocio from '../../../../imagenes/home/negocio-web.png'
 import empresa from '../../../../imagenes/home/empresa-web.png'
 import mas from '../../../../imagenes/home/evoluciona.png'
 
-// Logos
+// Logos tech
 import android from '../../../../imagenes/home/tech/small/android.png'
 import apache from '../../../../imagenes/home/tech/small/apache.png'
 import aws from '../../../../imagenes/home/tech/small/aws.png'
@@ -43,7 +43,6 @@ import jenkins from '../../../../imagenes/home/tech/small/jenkins.png'
 import jquery from '../../../../imagenes/home/tech/small/jquery.png'
 import js from '../../../../imagenes/home/tech/small/js.png'
 import kubernetes from '../../../../imagenes/home/tech/small/kubernetes.png'
-import mocha from '../../../../imagenes/home/tech/small/mocha.png'
 import mongo from '../../../../imagenes/home/tech/small/mongo.png'
 import mysql from '../../../../imagenes/home/tech/small/mysql.png'
 import native from '../../../../imagenes/home/tech/small/native.png'
@@ -61,6 +60,19 @@ import webpack from '../../../../imagenes/home/tech/small/webpack.png'
 import digitalOcean from '../../../../imagenes/home/tech/small/digitalOcean.png'
 import npmLogo from '../../../../imagenes/home/tech/small/npmLogo.png'
 
+// Logos marrketing
+import cm from '../../../../imagenes/home/mkt/small/cm.png'
+import digitalM from '../../../../imagenes/home/mkt/small/digitalM.png'
+import dmp from '../../../../imagenes/home/mkt/small/dmp.png'
+import fbads from '../../../../imagenes/home/mkt/small/fbads.png'
+import fbAn from '../../../../imagenes/home/mkt/small/fbAn.png'
+import gads from '../../../../imagenes/home/mkt/small/gads.png'
+import googlead from '../../../../imagenes/home/mkt/small/googlead.png'
+import linkedin from '../../../../imagenes/home/mkt/small/linkedin.png'
+import sem from '../../../../imagenes/home/mkt/small/sem.png'
+import seo from '../../../../imagenes/home/mkt/small/seo.png'
+import twitter from '../../../../imagenes/home/mkt/small/twitter.png'
+import estrategia from '../../../../imagenes/home/mkt/small/estrategia.png'
 
 function Home(){
     return(
@@ -123,18 +135,42 @@ function Home(){
                     <h3>Tecnologías y técnicas de marketing</h3>
                 </Row>
                 <Row >
-                    <Col align="middle" sm={4}>
-                        <TechIcon src={reactLogo} label="React" />
+                <Col align="middle" sm={4}>
+                        <TechIcon src={seo} label="seo" />
                     </Col>
                     <Col align="middle" sm={4}>
-                        <TechIcon src={bootstrap} label="React" />
+                        <TechIcon src={fbads} label="React" />
                     </Col>
                     <Col align="middle" sm={4}>
-                        <TechIcon src={android} label="React" />
+                        <TechIcon src={fbAn} label="React" />
                     </Col>
                     <Col align="middle" sm={4}>
-                        <TechIcon src={docker} label="React" />
-                    </Col> 
+                        <TechIcon src={gads} label="React" />
+                    </Col>
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={googlead} label="React" />
+                    </Col>
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={estrategia} label="React" />
+                    </Col>
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={dmp} label="React" />
+                    </Col>
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={sem} label="React" />
+                    </Col>
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={twitter} label="React" />
+                    </Col>
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={linkedin} label="React" />
+                    </Col>
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={digitalM} label="React" />
+                    </Col>
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={cm} label="React" />
+                    </Col>                   
                 </Row>
             </Col>
             <Col sm={24}>
@@ -167,23 +203,26 @@ function Home(){
                         <TechIcon src={js} label="React" />
                     </Col>
                     <Col align="middle" sm={4}>
-                        <TechIcon src={bluemix} label="React" />
-                    </Col>
-                    <Col align="middle" sm={4}>
-                        <TechIcon src={apache} label="React" />
-                    </Col>
-                    <Col align="middle" sm={4}>
                         <TechIcon src={aws} label="React" />
                     </Col>
                     <Col align="middle" sm={4}>
                         <TechIcon src={azure} label="React" />
-                    </Col>                    
+                    </Col>
                     <Col align="middle" sm={4}>
-                        <TechIcon src={bitbucket} label="React" />
-                    </Col> 
+                        <TechIcon src={java} label="React" />
+                    </Col>
                     <Col align="middle" sm={4}>
                         <TechIcon src={bootstrap} label="React" />
+                    </Col> 
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={bluemix} label="React" />
                     </Col>
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={apache} label="React" />
+                    </Col>                 
+                    <Col align="middle" sm={4}>
+                        <TechIcon src={bitbucket} label="React" />
+                    </Col>                    
                     <Col align="middle" sm={4}>
                         <TechIcon src={centos} label="React" />
                     </Col>                    
@@ -219,9 +258,6 @@ function Home(){
                     </Col>
                     <Col align="middle" sm={4}>
                         <TechIcon src={ibm} label="React" />
-                    </Col> 
-                    <Col align="middle" sm={4}>
-                        <TechIcon src={java} label="React" />
                     </Col> 
                     <Col align="middle" sm={4}>
                         <TechIcon src={jenkins} label="React" />
