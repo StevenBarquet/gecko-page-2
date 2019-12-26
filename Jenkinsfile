@@ -8,7 +8,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'npm install'
-                sh 'npm run start-dev'
+                sh 'npm start'
             }
         }
     }

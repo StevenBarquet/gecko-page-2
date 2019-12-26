@@ -1,8 +1,7 @@
 const path = require('path'); // modulo path que viene nativo de node
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // Genera un nuevo html con configuraciones especificas
 const webpack = require('webpack'); // hot reloader plugin
-// npx install-peerdeps --dev eslint-config-wesbos
+
 // equivalente a export default
 module.exports = {
   entry: {
@@ -14,6 +13,13 @@ module.exports = {
     // filename: 'papu-bundle-[name].js'
     filename: 'javascript/[name].js', // name corresponde a los nombres key de el objeto entry
     publicPath: '/dist/'
+  },
+  devServer: {
+    hot: true,
+    port: 3000,
+    open: true,
+    contentBase: path.resolve(__dirname, 'src'),
+    disableHostCheck: true // That solved it
   },
   // Crear shortcuts para paths absolutos
   resolve: {
@@ -38,65 +44,28 @@ module.exports = {
         exclude: /node_modules/ // excluye esa carpeta
       },
       {
-        test: /\.css$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader
-          },
-          {
-            loader: 'css-loader'
+        test: /\.jpg|png|gif|woff|eot|ttf|otf|svg|mp4|webm$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 80000
           }
-        ] // incluir loaders de css
+        }
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'] // incluir loaders de css
       },
       {
         test: /\.less$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader
-          },
-          {
-            loader: 'css-loader'
-          },
-          {
-            loader: 'less-loader'
-          }
-        ]
-      },
-      {
-        test: /\.jpg|png|gif|svg|mp4|webm$/,
-        use: {
-          loader: 'url-loader', // incluir url loader
-          options: {
-            limit: 80000,
-            name: '[name].[ext]',
-            outputPath: 'media/'
-          }
-        }
-      },
-      {
-        test: /\.eot|ttf|otf$/,
-        use: {
-          loader: 'url-loader', // incluir url loader
-          options: {
-            limit: 80000,
-            name: '[name].[ext]',
-            outputPath: 'fonts/'
-          }
-        }
+        use: ['style-loader', 'css-loader', 'less-loader'] // incluir loaders de css
       }
     ]
   },
   plugins: [
-    new MiniCssExtractPlugin({
-      filename: 'css/[name].css',
-      chunkFilename: 'css/[id].css' // con [id] te genera un id de nombre
-    }),
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, './src/index.html')
-    }),
-    new webpack.DllReferencePlugin({
-      manifest: require('./modules-manifest.json')
+      template: path.resolve(__dirname, 'src/index.html')
     })
   ]
 };
