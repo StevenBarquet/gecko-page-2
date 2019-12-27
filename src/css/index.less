@@ -45,7 +45,25 @@
 
   @import '~antd/dist/antd.css';
 
+
 /* -------------------------tema---------------------------- */
+@colorPrimary: #e99b2f;
+
+.ant-steps-item-process .ant-steps-item-icon{
+  background: @colorPrimary;
+}
+.ant-steps-item-process .ant-steps-item-icon{
+  border-color: @colorPrimary
+}
+.ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-tail::after{
+  background: @colorPrimary;
+}
+.ant-steps-item-finish .ant-steps-item-icon{
+  border-color: @colorPrimary;
+}
+.ant-steps-item-finish .ant-steps-item-icon > .ant-steps-icon{
+  color: @colorPrimary;
+}
 h1{
   font-size: 24px;
   font-family: 'Roboto Condensed Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -77,6 +95,13 @@ h6{
 }
 .ml-3{
   margin-left: 25px;
+}
+
+.mt-3{
+  margin-top: 25px;
+}
+.pxy-3{
+  padding: 25px 25px 25px 25px;
 }
 .center-box{
   margin-right: auto;
@@ -131,10 +156,10 @@ h6{
     align-items: center;
     justify-content: center;
     padding-left: 30px;
-    width: 15%;
+    width: 17%;
 }
 .button-block{
-  width: 85%;
+  width: 83%;
   margin-right: auto;
   margin-left: auto;
   /*Centrado horizontal de elementos*/
@@ -203,12 +228,12 @@ font-family: 'Roboto Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Gra
   width: 88%;
   margin-right: auto;
   margin-left: auto;
-  padding-top: 50px;
+  padding-top: 100px;
   /* border: 2px solid #fd9155; */
 }
 /* ---------------------Grow---------------------- */
 .grow-img-container{
-  width: 200px;
+  width: 260px;
   margin-top: 60px;
   margin-right: auto;
   margin-left: auto;
@@ -216,9 +241,21 @@ font-family: 'Roboto Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Gra
 .grow-img-container img{
   animation:  3000ms latido infinite;
 }
+.grow-img-container img:hover{
+  animation: none;
+  transform: scale(.95);
+}
 .grow-container{
   position: relative;
   text-align: center;
+}
+
+/* For demo */
+.ant-carousel .slick-slide {
+  height: 490px;
+  line-height: 100px;
+  background: #ffffff;
+  overflow: hidden;
 }
 .left-title-carousel{
   position: absolute;
@@ -236,10 +273,10 @@ font-family: 'Roboto Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Gra
 }
 .grow-bottom-bar{
   position: absolute;
-  top: 255px;
+  bottom: 0px;
   width: 100%;
   height: 35px;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgb(58, 56, 56);
 }
 /* ------------------footer-------------------- */
 .tech-titles{
@@ -271,14 +308,6 @@ font-family: 'Roboto Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Gra
   font-size: 18;
   color: #303030;
   text-align: center;
-}
-
-/* For demo */
-.ant-carousel .slick-slide {
-  height: 350px;
-  line-height: 100px;
-  background: #ffffff;
-  overflow: hidden;
 }
 
 @keyframes latido {

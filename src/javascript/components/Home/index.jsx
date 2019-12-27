@@ -1,16 +1,10 @@
 import React from 'react';
 
 // Others
-import { Col, Row, Carousel } from 'antd';
+import { Col, Row } from 'antd';
 
 // imagenes
 import Background from 'Images/home/bannerh.jpg';
-import idea from 'Images/home/idea.png';
-import boceto from 'Images/home/prototipo-web.png';
-import presencia from 'Images/home/presentacion-web.png';
-import negocio from 'Images/home/negocio-web.png';
-import empresa from 'Images/home/empresa-web.png';
-import mas from 'Images/home/evoluciona.png';
 
 // Logos tech
 import android from 'Images/home/tech/small/android.png';
@@ -71,8 +65,8 @@ import twitter from 'Images/home/mkt/small/twitter.png';
 import estrategia from 'Images/home/mkt/small/estrategia.png';
 
 // Componentes
-import GrowImg from './GrowImg.jsx';
-import TechIcon from './TechIcon.jsx';
+import HomeCarousel from 'Comp/Home/HomeCarousel';
+import TechIcon from 'Comp/Home/TechIcon';
 
 function Home() {
   return (
@@ -80,7 +74,7 @@ function Home() {
       <div className="home-title">
         <h1>
           <div>
-            GE<span>CK</span>O
+            SHE<span>LL</span>Y
           </div>{' '}
           se especializa en el <span>crecimiento</span> de tu negocio en{' '}
           <div>internet.</div>
@@ -103,38 +97,7 @@ function Home() {
           </Col>
         </Row>
         <Row>
-          <Carousel autoplay dotPosition="bottom">
-            <div>
-              <GrowImg src={idea} title="Paso 1" label="Idea" />
-            </div>
-            <div>
-              <GrowImg src={boceto} title="Paso 2" label="Boceto" />
-            </div>
-            <div>
-              <GrowImg
-                src={presencia}
-                title="Paso 3"
-                label="Presencia ONLINE"
-              />
-            </div>
-            <div>
-              <GrowImg src={negocio} title="Paso 4" label="Negocio Online" />
-            </div>
-            <div>
-              <GrowImg
-                src={empresa}
-                title="Paso 5"
-                label="Empresa, E-Comerce o Proveedor profesional de servicios"
-              />
-            </div>
-            <div>
-              <GrowImg
-                src={mas}
-                title="Paso 6"
-                label="Automatización, Nuevas Características, Optimización y más"
-              />
-            </div>
-          </Carousel>
+          <HomeCarousel />
         </Row>
       </div>
       <Row>
