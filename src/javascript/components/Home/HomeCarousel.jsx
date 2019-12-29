@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 // Others
 import { Carousel } from 'antd';
@@ -16,31 +16,62 @@ import GrowStep from 'Comp/Home/GrowStep';
 
 const HomeCarousel = () => {
   const [step, setStep] = useState(0);
-  const onChange = currentStep => {
-    setStep(currentStep);
+  const slider = useRef();
+
+  const changeStepNum = (from, to) => {
+    setStep(to);
+  };
+
+  const changeStepSlide = nextStep => {
+    setStep(nextStep);
+    slider.current.goTo(nextStep);
   };
 
   return (
-    <Carousel afterChange={onChange} autoplay dotPosition="bottom">
-      <div>
-        <GrowStep src={idea} step={step} />
-      </div>
-      <div>
-        <GrowStep src={boceto} step={step} />
-      </div>
-      <div>
-        <GrowStep src={presencia} step={step} />
-      </div>
-      <div>
-        <GrowStep src={negocio} step={step} />
-      </div>
-      <div>
-        <GrowStep src={empresa} step={step} />
-      </div>
-      <div>
-        <GrowStep src={mas} step={step} />
-      </div>
-    </Carousel>
+    <React.Fragment>
+      <Carousel
+        ref={ref => {
+          slider.current = ref;
+        }}
+        beforeChange={changeStepNum}
+        dotPosition="bottom"
+      >
+        <div>
+          <GrowStep changeStepSlide={changeStepSlide} src={idea} step={step} />
+        </div>
+        <div>
+          <GrowStep
+            changeStepSlide={changeStepSlide}
+            src={boceto}
+            step={step}
+          />
+        </div>
+        <div>
+          <GrowStep
+            changeStepSlide={changeStepSlide}
+            src={presencia}
+            step={step}
+          />
+        </div>
+        <div>
+          <GrowStep
+            changeStepSlide={changeStepSlide}
+            src={negocio}
+            step={step}
+          />
+        </div>
+        <div>
+          <GrowStep
+            changeStepSlide={changeStepSlide}
+            src={empresa}
+            step={step}
+          />
+        </div>
+        <div>
+          <GrowStep changeStepSlide={changeStepSlide} src={mas} step={step} />
+        </div>
+      </Carousel>
+    </React.Fragment>
   );
 };
 

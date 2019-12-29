@@ -6,7 +6,7 @@ import { Col, Row, Steps, Collapse } from 'antd';
 // Componentes
 
 const GrowStep = props => {
-  const { src, step } = props;
+  const { src, step, changeStepSlide } = props;
 
   const { Step } = Steps;
   const { Panel } = Collapse;
@@ -17,11 +17,18 @@ const GrowStep = props => {
   it can be found as a welcome guest in many households across the world.
 `;
 
+  console.log(props);
+
   return (
     <React.Fragment>
       <Row>
         <Col sm={6}>
-          <Steps className="ml-3 mt-3" direction="vertical" current={step}>
+          <Steps
+            className="ml-3 mt-3"
+            direction="vertical"
+            onChange={changeStepSlide}
+            current={step}
+          >
             <Step title="Paso 1" description="Idea" />
             <Step title="Paso 2" description="Boceto" />
             <Step title="Paso 3" description="Presencia online" />
