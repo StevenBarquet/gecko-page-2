@@ -17,8 +17,6 @@ const GrowStep = props => {
   it can be found as a welcome guest in many households across the world.
 `;
 
-  console.log(props);
-
   return (
     <React.Fragment>
       <Row>
