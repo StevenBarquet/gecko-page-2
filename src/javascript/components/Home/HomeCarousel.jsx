@@ -36,7 +36,6 @@ const HomeCarousel = () => {
         beforeChange={changeStepNum}
         dotPosition="bottom"
         autoplay
-        effect="fade"
       >
         <div>
           <GrowStep changeStepSlide={changeStepSlide} src={idea} step={step} />
