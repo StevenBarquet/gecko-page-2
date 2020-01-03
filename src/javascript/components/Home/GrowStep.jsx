@@ -6,16 +6,12 @@ import { Col, Row, Steps, Collapse } from 'antd';
 // Componentes
 
 const GrowStep = props => {
-  const { src, step, changeStepSlide } = props;
+  const { src, step, changeStepSlide, children } = props;
 
   const { Step } = Steps;
   const { Panel } = Collapse;
 
-  const text = `
-  A dog is a type of domesticated animal.
-  Known for its loyalty and faithfulness,
-  it can be found as a welcome guest in many households across the world.
-`;
+  console.log(' el jsx es ', children);
 
   return (
     <React.Fragment>
@@ -47,9 +43,9 @@ const GrowStep = props => {
           </div>
         </Col>
         <Col className="pxy-3" align="middle" sm={8}>
-          <Collapse bordered={false} accordion>
+          <Collapse defaultActiveKey={['1']} accordion>
             <Panel header="Detalles" key="1">
-              <p>{text}</p>
+              <p>{children}</p>
             </Panel>
           </Collapse>
         </Col>

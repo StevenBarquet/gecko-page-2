@@ -45,9 +45,9 @@
 
   @import '~antd/dist/antd.css';
 
-
 /* -------------------------tema---------------------------- */
-@colorPrimary: #e99b2f;
+@colorPrimary: #ffb71b;
+@colorPrimaryLigth: #ffcc5e;
 
 .ant-steps-item-process .ant-steps-item-icon{
   background: @colorPrimary;
@@ -71,14 +71,42 @@
   border-color: @colorPrimary;
 }
 .ant-steps .ant-steps-item:not(.ant-steps-item-active):not(.ant-steps-item-process) > .ant-steps-item-container[role="button"]:hover .ant-steps-item-icon .ant-steps-icon{
-  color: #6e6d6d;
+  color: @colorPrimary;
+}
+.ant-btn-primary:hover, .ant-btn-primary:focus{
+  color:rgb(255, 255, 255);
+  background-color:@colorPrimaryLigth;
+  border-color:@colorPrimaryLigth;
+}
+.ant-btn-primary{
+  color:rgb(255, 255, 255);
+  background-color:@colorPrimary;
+  border-color:@colorPrimary;
+}
+.ant-list{
+  color: rgb(255, 255, 255);
+}
+.ant-list-header{
+  color: @colorPrimary;
+}
+.ant-form-item-label > label{
+  color: #ffffff;
+}
+.ant-checkbox-wrapper{
+  color: #ffffff;
+}
+.ant-form-explain, .ant-form-extra{
+  color: #ffffff;
 }
 h1{
-  font-size: 24px;
+  font-size: 46px;
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 1.5px 1.5px #1a1a1a;
   font-family: 'Roboto Condensed Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 h1 span{
-  color: #e99b2f;
+  color: @colorPrimary;
   text-shadow: 1.5px 1.5px #1a1a1a;
 }
 h2{
@@ -87,20 +115,37 @@ h2{
   color: #ffffff;
 }
 h2 span{
-  color: #e99b2f;
+  color: @colorPrimary;
   text-shadow: 1.5px 1.5px #1a1a1a;
 }
 h3{
   font-size: 30px;
   font-family: 'Roboto Condensed Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: #e99b2f;
+  color: @colorPrimary;
+}
+
+h4{
+  font-size: 20px;
+  font-family: 'Roboto Condensed Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #1a1918;
+}
+
+h5{
+  font-size: 18px;
+  color: #ffffff;
+  font-family: 'Roboto Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  span{
+    color: #1a1918;
+  }
 }
 
 h6{
   font-size: 18px;
   color: #242424;
-  letter-spacing: 2px;
   font-family: 'Roboto Condensed Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  span{
+    color: @colorPrimary;
+  }
 }
 .ml-3{
   margin-left: 25px;
@@ -109,8 +154,17 @@ h6{
 .mt-3{
   margin-top: 25px;
 }
+.py-3{
+  padding: 25px 0px 25px 0px;
+}
+.py-2{
+  padding: 15px 0px 15px 0px;
+}
 .pxy-3{
   padding: 25px 25px 25px 25px;
+}
+.px-2{
+  padding: 0px 15px 0px 15px;
 }
 .center-box{
   margin-right: auto;
@@ -180,8 +234,8 @@ h6{
 .homeBanner{
     display: block;
     width: 100%;
-    position: absolute;
-    top: 0px;
+    position: relative;
+    top: -90px;
     left: 0px;
     z-index: -1;
   }
@@ -192,40 +246,31 @@ h6{
   display:  block;
   font-family: 'Roboto Condensed Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   width: 58%;
-  margin: 50px 0px 120px 20px; 
+  position: absolute;
+  top: 180px;
+  left: 30px;
   text-align: left;
   /* top margin is 25px
   right margin is 50px
   bottom margin is 75px
   left margin is 100px */
+  h1{
+    font-size: 46px;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 1.5px 1.5px #1a1a1a;
+  }
+  div{
+    display: inline-block;
+    font-weight: bold;
+  }
+  span{
+    font-size: 20px;
+  }
 }
-.home-title h1{
-  font-size: 46px;
-  color: #ffffff;
-  font-weight: bold;
-  text-shadow: 1.5px 1.5px #1a1a1a;
-}
-.home-title h1 div{
-  display: inline-block;
-  font-weight: bold;
-}
-.home-title h1 span{
-  color: #e99b2f;
-  /* color: #fd9155; */
-}
-/* ---------------Sub-Title--------- */
-.home-title h2{
-  width: 75%;
-  font-size: 30px;
-  font-weight: bold;
-  color: #e99b2f;
-  text-shadow: 2px 2px #1a1a1a;
-}
-.home-title h2 div{
-  display: inline-block;
-  font-weight: bold;
-  color: #ffffff;
-  font-size: 34px;
+.home-button{
+  width: 300px;
+  display: block;
 }
 
 /* -----------------------------------------------------Body---------------------------------------------------- */
@@ -237,7 +282,6 @@ font-family: 'Roboto Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Gra
   width: 88%;
   margin-right: auto;
   margin-left: auto;
-  padding-top: 100px;
   /* border: 2px solid #fd9155; */
 }
 /* ---------------------Grow---------------------- */
@@ -261,7 +305,6 @@ font-family: 'Roboto Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Gra
 
 /* For demo */
 .ant-carousel .slick-slide {
-  height: 490px;
   line-height: 100px;
   background: #ffffff;
   overflow: hidden;
@@ -319,6 +362,45 @@ font-family: 'Roboto Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Gra
   text-align: center;
 }
 
+// --------------------------------------PERCENTAGE----------------------------------------
+.percentage-box{
+  width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+}
+
+.percentage{
+  padding: 20px 0px 20px 0px;
+  color: #3ab415;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: 'Roboto Condensed Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+//---------------------------------------Footer--------------------
+.footer-box{
+  width: 100%;
+  margin-top: 40px;
+  padding: 10px 0px 10px 20px;
+  background-color: #222357;
+}
+.rigths{
+  display: block;
+  text-align: center;
+}
+.top40{
+  margin-top: 40px;
+}
+.footer-phone{
+  color: #ffffff;
+  padding: 15px 0px 15px 10px;
+  font-size: 16px;
+  span{
+    color: @colorPrimary;
+    font-size: 24px;
+    padding: 0px 10px 0px 10px;
+  }
+}
 @keyframes latido {
   0%{
       transform: scale(1.05);

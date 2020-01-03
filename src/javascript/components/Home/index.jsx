@@ -1,283 +1,202 @@
 import React from 'react';
 
 // Others
-import { Col, Row } from 'antd';
+import { Col, Row, Button, List, Typography, Icon } from 'antd';
 
 // imagenes
 import Background from 'Images/home/bannerh.jpg';
+import logow from 'Images/logow.png';
 
-// Logos tech
-import android from 'Images/home/tech/small/android.png';
-import apache from 'Images/home/tech/small/apache.png';
-import aws from 'Images/home/tech/small/aws.png';
-import azure from 'Images/home/tech/small/azure.png';
-import bitbucket from 'Images/home/tech/small/bitbucket.png';
-import bluemix from 'Images/home/tech/small/bluemix.png';
-import bootstrap from 'Images/home/tech/small/bootstrap.png';
-import centos from 'Images/home/tech/small/centos.png';
-import cssLogo from 'Images/home/tech/small/css.png';
-import debian from 'Images/home/tech/small/debian.png';
-import django from 'Images/home/tech/small/django.png';
-import docker from 'Images/home/tech/small/docker.png';
-import fedora from 'Images/home/tech/small/fedora.png';
-import flask from 'Images/home/tech/small/flask.png';
-import git from 'Images/home/tech/small/git.png';
-import github from 'Images/home/tech/small/github.png';
-import gitlab from 'Images/home/tech/small/gitlab.png';
-import heroku from 'Images/home/tech/small/heroku.png';
-import html5 from 'Images/home/tech/small/html5.png';
-import ibmCloud from 'Images/home/tech/small/ibmCloud.png';
-import ibm from 'Images/home/tech/small/ibm.png';
-import java from 'Images/home/tech/small/java.png';
-import jenkins from 'Images/home/tech/small/jenkins.png';
-import jquery from 'Images/home/tech/small/jquery.png';
-import js from 'Images/home/tech/small/js.png';
-import kubernetes from 'Images/home/tech/small/kubernetes.png';
-import mongo from 'Images/home/tech/small/mongo.png';
-import mysql from 'Images/home/tech/small/mysql.png';
-import native from 'Images/home/tech/small/native.png';
-import node from 'Images/home/tech/small/node.png';
-import openshift from 'Images/home/tech/small/openshift.png';
-import postgres from 'Images/home/tech/small/postgres.png';
-import python from 'Images/home/tech/small/python.png';
-import rails from 'Images/home/tech/small/rails.png';
-import reactLogo from 'Images/home/tech/small/reactLogo.png';
-import redHat from 'Images/home/tech/small/redHat.png';
-import reduxLogo from 'Images/home/tech/small/reduxLogo.png';
-import spring from 'Images/home/tech/small/spring.png';
-import ubuntu from 'Images/home/tech/small/ubuntu.png';
-import webpack from 'Images/home/tech/small/webpack.png';
-import digitalOcean from 'Images/home/tech/small/digitalOcean.png';
-import npmLogo from 'Images/home/tech/small/npmLogo.png';
-
-// Logos marrketing
-import cm from 'Images/home/mkt/small/cm.png';
-import digitalM from 'Images/home/mkt/small/digitalM.png';
-import dmp from 'Images/home/mkt/small/dmp.png';
-import fbads from 'Images/home/mkt/small/fbads.png';
-import fbAn from 'Images/home/mkt/small/fbAn.png';
-import gads from 'Images/home/mkt/small/gads.png';
-import googlead from 'Images/home/mkt/small/googlead.png';
-import linkedin from 'Images/home/mkt/small/linkedin.png';
-import sem from 'Images/home/mkt/small/sem.png';
-import seo from 'Images/home/mkt/small/seo.png';
-import twitter from 'Images/home/mkt/small/twitter.png';
-import estrategia from 'Images/home/mkt/small/estrategia.png';
+// Logos footer
+import whats from 'Images/home/footer-logos/whats_logo.png';
+import fb from 'Images/home/footer-logos/fb_logo.png';
+import insta from 'Images/home/footer-logos/insta_logo.png';
+import gmail from 'Images/home/footer-logos/gmail_logo.png';
 
 // Componentes
 import HomeCarousel from 'Comp/Home/HomeCarousel';
-import TechIcon from 'Comp/Home/TechIcon';
+import TechLogos from 'Comp/Home/TechLogos';
+import ContactForm from 'Comp/Contacto/ContactForm';
 
 function Home() {
+  const lista = ['Servicios', 'Politica de privacidad', 'Terminos de uso'];
   return (
     <React.Fragment>
-      <div className="home-title">
-        <h1>
-          <div>
-            SHE<span>LL</span>Y
-          </div>{' '}
-          se especializa en el <span>crecimiento</span> de tu negocio en{' '}
-          <div>internet.</div>
-        </h1>
-        <h2>
-          Utilizamos marketing para que llegues a <div>millones</div> de
-          personas y las tecnologías más avanzadas en el desarrollo de software
-          para que <div>trabaje por ti</div>
-        </h2>
-      </div>
       <div className="homeBanner">
         <img src={Background} alt="Gecko Logo" width="100%" />
       </div>
+      <div className="home-title">
+        <h1>Haz crecer tu negocio con internet</h1>
+        <div className="home-button">
+          <Button type="primary" block>
+            ¿Porque SHELLY?
+          </Button>
+        </div>
+      </div>
+      {/* {---------------------------------Presentacion Inicial------------------------} */}
       <div className="home-body">
         <Row>
-          <Col sm={24}>
+          <Col align="middle" sm={24}>
+            <img src={logow} alt="ssaas" width="380px" />
+          </Col>
+          <Col align="middle" sm={24}>
             <h2 style={{ textAlign: 'center' }}>
-              Tú vas a <span>dominar</span> el mercado, te ayudamos...
+              Nos especializamos en el <span>crecimiento</span> de tu negocio en
+              internet.
             </h2>
           </Col>
         </Row>
         <Row>
+          <h2 style={{ textAlign: 'center' }}>
+            <br />
+            Utilizamos marketing para que llegues a <span>millones</span> de
+            personas y las tecnologías más avanzadas en el desarrollo de
+            software para que <span>trabaje por ti</span>
+          </h2>
+          <br />
+        </Row>
+        {/* {---------------------------------Carrusel------------------------} */}
+        <Row>
           <HomeCarousel />
         </Row>
+        {/* {-----Fin carrusel-----} */}
+        <Row>
+          <Col sm={24}>
+            <h1 style={{ textAlign: 'center' }}>
+              Tú vas a <span>dominar</span> el mercado, te ayudamos...
+            </h1>
+          </Col>
+        </Row>
       </div>
+      {/* {---------------------------------Porcentajes------------------------} */}
+      <Row className="tech-titles">
+        <h3>Porque los resultados hablan más que las palabras...</h3>
+      </Row>
       <Row>
-        <Col sm={24}>
-          <Row className="tech-titles">
-            <h3>Tecnologías y técnicas de marketing</h3>
+        <Row className="percentage-box">
+          <Col align="middle" sm={8}>
+            <Row className="percentage">77%</Row>
+            <Row className="px-2">
+              <h4>
+                De nuestros clientes aumenta sus ventas en un 250% en los
+                primeros 3 meses
+              </h4>
+            </Row>
+          </Col>
+          <Col align="middle" sm={8}>
+            <Row className="percentage">92%</Row>
+            <Row className="px-2">
+              <h4>
+                Recupera su inversion antes de los primeros 6 meses de operación
+              </h4>
+            </Row>
+          </Col>
+          <Col align="middle" sm={8}>
+            <Row className="percentage">54%</Row>
+            <Row className="px-2">
+              <h4>
+                Es la reducción promedio en costos de produccion de los clientes
+                que automatizaron sus productos/servicios
+              </h4>
+            </Row>
+          </Col>
+        </Row>
+      </Row>
+      {/* {---------------------------------Tech Logos------------------------} */}
+      <TechLogos />
+      {/* {---------------------------------Contact or services------------------------} */}
+      <Row className="pxy-3">
+        <Col align="middle" sm={12}>
+          <Row>
+            <Col align="middle" sm={24}>
+              <h2>
+                Emprende, crece o fortalece tu negocio. En SHE<span>LL</span>Y
+                nos encargamos de llevarte a lograr tus <span>metas</span>
+              </h2>
+            </Col>
           </Row>
           <Row>
-            <Col align="middle" sm={4}>
-              <TechIcon src={seo} label="seo" />
+            <Col className="py-3" align="middle" sm={24}>
+              <Button type="primary" block>
+                <h5>Servicios de desarrollo</h5>
+              </Button>
             </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={fbads} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={fbAn} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={gads} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={googlead} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={estrategia} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={dmp} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={sem} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={twitter} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={linkedin} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={digitalM} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={cm} label="React" />
+            <Col className="py-2" align="middle" sm={24}>
+              <Button type="default" block>
+                <h5>
+                  <span>Servicios de marketing</span>
+                </h5>
+              </Button>
             </Col>
           </Row>
         </Col>
-        <Col sm={24}>
-          <Row className="tech-titles">
-            <h3>Tecnologías de desarrollo</h3>
-          </Row>
+        <Col align="middle" sm={12}>
           <Row>
-            <Col align="middle" sm={4}>
-              <TechIcon src={html5} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={cssLogo} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={npmLogo} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={reactLogo} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={native} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={android} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={node} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={js} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={aws} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={azure} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={java} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={bootstrap} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={bluemix} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={apache} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={bitbucket} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={centos} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={debian} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={django} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={flask} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={fedora} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={docker} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={git} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={github} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={gitlab} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={heroku} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={ibmCloud} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={ibm} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={jenkins} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={jquery} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={kubernetes} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={digitalOcean} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={mongo} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={mysql} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={openshift} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={postgres} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={python} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={rails} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={redHat} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={reduxLogo} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={spring} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={ubuntu} label="React" />
-            </Col>
-            <Col align="middle" sm={4}>
-              <TechIcon src={webpack} label="React" />
+            <Col align="middle" sm={24}>
+              <ContactForm />
             </Col>
           </Row>
         </Col>
       </Row>
+      {/* {---------------------------------Footer------------------------} */}
+      <div className="footer-box">
+        <Row>
+          <Col sm={4}>
+            <Row>
+              <List
+                header={<span>Otros</span>}
+                size="small"
+                dataSource={lista}
+                renderItem={item => (
+                  <List.Item>
+                    <Typography.Text mark />
+                    <Icon type="right-circle" /> {item}
+                  </List.Item>
+                )}
+              />
+            </Row>
+          </Col>
+          <Col offset={8} sm={10}>
+            <Row>
+              <Col align="middle" sm={24}>
+                <h6>
+                  <span>Contacto</span>
+                </h6>
+              </Col>
+            </Row>
+            <Row>
+              <Col align="middle" sm={6}>
+                <img src={whats} alt="whats app logo" width="60px" />
+              </Col>
+              <Col align="middle" sm={6}>
+                <img src={fb} alt="whats app logo" width="60px" />
+              </Col>
+              <Col align="middle" sm={6}>
+                <img src={insta} alt="whats app logo" width="60px" />
+              </Col>
+              <Col align="middle" sm={6}>
+                <img src={gmail} alt="whats app logo" width="60px" />
+              </Col>
+            </Row>
+            <Row className="footer-phone">
+              <Col sm={20}>
+                <span>
+                  <Icon type="phone" />
+                </span>
+                5533700670 <span>|</span> 555555555
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+        <Row>
+          <Col className="top40" align="middle" sm={24}>
+            <img src={logow} alt="ssaas" width="160px" />
+          </Col>
+        </Row>
+        <div className="rigths">
+          © 2019 Shelly Boost, Inc. All Rights Reserved.
+        </div>
+      </div>
     </React.Fragment>
   );
 }

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import frame from 'Images/frame.png';
 import { Link } from 'react-router-dom';
 import { changeFlag } from 'Actions/showFlag';
+import { Button } from 'antd';
 
 const ImageExample = props => {
   const { flag } = props;
@@ -19,9 +20,9 @@ const ImageExample = props => {
       <a href="/">
         <h3>To home --- "href"</h3>
       </a>
-      <button type="button" onClick={handleclick}>
-        Mostrar imagen
-      </button>
+      <Button type="primary" onClick={handleclick} block>
+        Show Loaders
+      </Button>
       {flag.showImg && <img src={frame} alt="frameo" />}
     </React.Fragment>
   );
