@@ -5,62 +5,24 @@ import {
   Input,
   Tooltip,
   Icon,
-  Cascader,
   Select,
   Row,
   Col,
   Checkbox,
-  Button,
-  AutoComplete
+  Button
 } from 'antd';
 
 const { Option } = Select;
-const AutoCompleteOption = AutoComplete.Option;
-
-const residences = [
-  {
-    value: 'zhejiang',
-    label: 'Zhejiang',
-    children: [
-      {
-        value: 'hangzhou',
-        label: 'Hangzhou',
-        children: [
-          {
-            value: 'xihu',
-            label: 'West Lake'
-          }
-        ]
-      }
-    ]
-  },
-  {
-    value: 'jiangsu',
-    label: 'Jiangsu',
-    children: [
-      {
-        value: 'nanjing',
-        label: 'Nanjing',
-        children: [
-          {
-            value: 'zhonghuamen',
-            label: 'Zhong Hua Men'
-          }
-        ]
-      }
-    ]
-  }
-];
 
 class RegistrationForm extends React.Component {
   state = {
-    confirmDirty: false,
-    autoCompleteResult: []
+    confirmDirty: false
   };
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.form.validateFieldsAndScroll((err, values) => {
+    const { validateFieldsAndScroll } = this.props;
+    validateFieldsAndScroll((err, values) => {
       if (!err) {
         console.log('Received values of form: ', values);
       }
@@ -69,7 +31,9 @@ class RegistrationForm extends React.Component {
 
   handleConfirmBlur = e => {
     const { value } = e.target;
-    this.setState({ confirmDirty: this.state.confirmDirty || !!value });
+    this.setState(prevState => ({
+      confirmDirty: prevState.confirmDirty || !!value
+    }));
   };
 
   compareToFirstPassword = (rule, value, callback) => {
@@ -83,27 +47,16 @@ class RegistrationForm extends React.Component {
 
   validateToNextPassword = (rule, value, callback) => {
     const { form } = this.props;
-    if (value && this.state.confirmDirty) {
+    const { confirmDirty } = this.state;
+    if (value && confirmDirty) {
       form.validateFields(['confirm'], { force: true });
     }
     callback();
   };
 
-  handleWebsiteChange = value => {
-    let autoCompleteResult;
-    if (!value) {
-      autoCompleteResult = [];
-    } else {
-      autoCompleteResult = ['.com', '.org', '.net'].map(
-        domain => `${value}${domain}`
-      );
-    }
-    this.setState({ autoCompleteResult });
-  };
-
   render() {
-    const { getFieldDecorator } = this.props.form;
-    const { autoCompleteResult } = this.state;
+    const { form } = this.props;
+    const { getFieldDecorator } = form;
 
     const formItemLayout = {
       labelCol: {
@@ -208,7 +161,7 @@ class RegistrationForm extends React.Component {
               valuePropName: 'checked'
             })(
               <Checkbox>
-                I have read the <a href="">agreement</a>
+                I have read the <a href="holo">agreement</a>
               </Checkbox>
             )}
           </Form.Item>
