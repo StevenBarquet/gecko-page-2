@@ -91,7 +91,7 @@ class RegistrationForm extends React.Component {
 
     return (
       <React.Fragment>
-        <h1>Haz tu cita</h1>
+        <h2>Haz tu cita</h2>
         <Form {...formItemLayout} onSubmit={this.handleSubmit}>
           <Form.Item label="E-mail">
             {getFieldDecorator('email', {

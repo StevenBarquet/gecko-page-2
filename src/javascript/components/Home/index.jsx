@@ -7,16 +7,11 @@ import { Col, Row, Button, List, Typography, Icon } from 'antd';
 import Background from 'Images/home/bannerh.jpg';
 import logow from 'Images/logow.png';
 
-// Logos footer
-import whats from 'Images/home/footer-logos/whats_logo.png';
-import fb from 'Images/home/footer-logos/fb_logo.png';
-import insta from 'Images/home/footer-logos/insta_logo.png';
-import gmail from 'Images/home/footer-logos/gmail_logo.png';
-
 // Componentes
 import HomeCarousel from 'Comp/Home/HomeCarousel';
 import TechLogos from 'Comp/Home/TechLogos';
 import ContactForm from 'Comp/Contacto/ContactForm';
+import ContactData from 'Comp/Contacto/ContactData';
 
 function Home() {
   const lista = ['Servicios', 'Politica de privacidad', 'Terminos de uso'];
@@ -102,16 +97,19 @@ function Home() {
           </Col>
         </Row>
       </Row>
-      {/* {---------------------------------Tech Logos------------------------} */}
-      <TechLogos />
       {/* {---------------------------------Contact or services------------------------} */}
       <Row className="pxy-3">
+        <Col className="mt-5" align="middle" sm={24}>
+          <h1>
+            Estás a <span>1 clic</span> de acercarte a tus metas{' '}
+          </h1>
+        </Col>
         <Col align="middle" sm={12}>
           <Row>
             <Col align="middle" sm={24}>
               <h2>
                 Emprende, crece o fortalece tu negocio. En SHE<span>LL</span>Y
-                nos encargamos de llevarte a lograr tus <span>metas</span>
+                nos encargamos de llevarte a lograr tu <span>objetivo</span>
               </h2>
             </Col>
           </Row>
@@ -129,6 +127,11 @@ function Home() {
               </Button>
             </Col>
           </Row>
+          <Row>
+            <Col align="middle" sm={24}>
+              <ContactData />
+            </Col>
+          </Row>
         </Col>
         <Col align="middle" sm={12}>
           <Row>
@@ -138,6 +141,8 @@ function Home() {
           </Row>
         </Col>
       </Row>
+      {/* {---------------------------------Tech Logos------------------------} */}
+      <TechLogos />
       {/* {---------------------------------Footer------------------------} */}
       <div className="footer-box">
         <Row>
@@ -157,35 +162,7 @@ function Home() {
             </Row>
           </Col>
           <Col offset={8} sm={10}>
-            <Row>
-              <Col align="middle" sm={24}>
-                <h6>
-                  <span>Contacto</span>
-                </h6>
-              </Col>
-            </Row>
-            <Row>
-              <Col align="middle" sm={6}>
-                <img src={whats} alt="whats app logo" width="60px" />
-              </Col>
-              <Col align="middle" sm={6}>
-                <img src={fb} alt="whats app logo" width="60px" />
-              </Col>
-              <Col align="middle" sm={6}>
-                <img src={insta} alt="whats app logo" width="60px" />
-              </Col>
-              <Col align="middle" sm={6}>
-                <img src={gmail} alt="whats app logo" width="60px" />
-              </Col>
-            </Row>
-            <Row className="footer-phone">
-              <Col sm={20}>
-                <span>
-                  <Icon type="phone" />
-                </span>
-                5533700670 <span>|</span> 555555555
-              </Col>
-            </Row>
+            <ContactData />
           </Col>
         </Row>
         <Row>
