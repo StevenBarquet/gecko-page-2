@@ -80,6 +80,7 @@ module.exports = {
     "global-require": 0,
     "no-path-concat": 0,
     "prefer-template": 0,
+    "no-plusplus": 0,
     "react/prefer-stateless-function": 0,
     "react/forbid-prop-types": 0,
     "react/prop-types": 0,

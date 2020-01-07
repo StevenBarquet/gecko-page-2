@@ -24610,6 +24610,17 @@ div.ant-typography-edit-content {
   background-color: #ffb71b;
   border-color: #ffb71b;
 }
+.ant-btn-danger:hover,
+.ant-btn-danger:focus {
+  color: #ffffff;
+  background-color: #56d42f;
+  border-color: #56d42f;
+}
+.ant-btn-danger {
+  color: #ffffff;
+  background-color: #3ab415;
+  border-color: #3ab415;
+}
 .ant-list {
   color: #ffffff;
 }
@@ -24811,6 +24822,11 @@ body {
   margin-left: auto;
   /* border: 2px solid #fd9155; */
 }
+.captchaField {
+  background: #ffffff;
+  width: 150px;
+  border-radius: 3px;
+}
 /* ---------------------Grow---------------------- */
 .grow-img-container {
   width: 260px;
@@ -24899,6 +24915,12 @@ body {
   font-size: 60px;
   font-weight: bold;
   font-family: 'Roboto Condensed Regular', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.dataLogo {
+  cursor: pointer;
+}
+.dataLogo:hover {
+  transform: scale(1.05);
 }
 .footer-box {
   width: 100%;

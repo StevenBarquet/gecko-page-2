@@ -11,8 +11,6 @@ const GrowStep = props => {
   const { Step } = Steps;
   const { Panel } = Collapse;
 
-  console.log(' el jsx es ', children);
-
   return (
     <React.Fragment>
       <Row>

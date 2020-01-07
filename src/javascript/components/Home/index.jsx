@@ -23,9 +23,11 @@ function Home() {
       <div className="home-title">
         <h1>Haz crecer tu negocio con internet</h1>
         <div className="home-button">
-          <Button type="primary" block>
-            ¿Porque SHELLY?
-          </Button>
+          <a href="#why">
+            <Button type="primary" block>
+              ¿Porque SHELLY?
+            </Button>
+          </a>
         </div>
       </div>
       {/* {---------------------------------Presentacion Inicial------------------------} */}
@@ -64,7 +66,7 @@ function Home() {
         </Row>
       </div>
       {/* {---------------------------------Porcentajes------------------------} */}
-      <Row className="tech-titles">
+      <Row id="why" className="tech-titles">
         <h3>Porque los resultados hablan más que las palabras...</h3>
       </Row>
       <Row>
@@ -136,6 +138,7 @@ function Home() {
         <Col align="middle" sm={12}>
           <Row>
             <Col align="middle" sm={24}>
+              <h2>Haz tu cita</h2>
               <ContactForm />
             </Col>
           </Row>

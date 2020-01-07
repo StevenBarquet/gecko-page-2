@@ -1,196 +1,184 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+import { connect } from 'react-redux';
 
 import {
   Form,
   Input,
   Tooltip,
   Icon,
-  Select,
-  Row,
-  Col,
+  AutoComplete,
   Checkbox,
   Button
 } from 'antd';
 
-const { Option } = Select;
+// Componentes
+import SimpleCaptcha from 'Comp/Captcha/SimpleCaptcha';
 
-class RegistrationForm extends React.Component {
-  state = {
-    confirmDirty: false
-  };
+// Actions
+import { addInput } from 'Actions/FormDate';
 
-  handleSubmit = e => {
-    e.preventDefault();
-    const { validateFieldsAndScroll } = this.props;
-    validateFieldsAndScroll((err, values) => {
-      if (!err) {
-        console.log('Received values of form: ', values);
-      }
-    });
-  };
-
-  handleConfirmBlur = e => {
-    const { value } = e.target;
-    this.setState(prevState => ({
-      confirmDirty: prevState.confirmDirty || !!value
-    }));
-  };
-
-  compareToFirstPassword = (rule, value, callback) => {
-    const { form } = this.props;
-    if (value && value !== form.getFieldValue('password')) {
-      callback('Two passwords that you enter is inconsistent!');
-    } else {
-      callback();
-    }
-  };
-
-  validateToNextPassword = (rule, value, callback) => {
-    const { form } = this.props;
-    const { confirmDirty } = this.state;
-    if (value && confirmDirty) {
-      form.validateFields(['confirm'], { force: true });
-    }
-    callback();
-  };
-
-  render() {
-    const { form } = this.props;
-    const { getFieldDecorator } = form;
-
-    const formItemLayout = {
-      labelCol: {
-        xs: { span: 24 },
-        sm: { span: 8 }
-      },
-      wrapperCol: {
-        xs: { span: 24 },
-        sm: { span: 16 }
-      }
-    };
-    const tailFormItemLayout = {
-      wrapperCol: {
-        xs: {
-          span: 24,
-          offset: 0
-        },
-        sm: {
-          span: 16,
-          offset: 8
-        }
-      }
-    };
-    const prefixSelector = getFieldDecorator('prefix', {
-      initialValue: '86'
-    })(
-      <Select style={{ width: 70 }}>
-        <Option value="86">+86</Option>
-        <Option value="87">+87</Option>
-      </Select>
-    );
-
-    return (
-      <React.Fragment>
-        <h2>Haz tu cita</h2>
-        <Form {...formItemLayout} onSubmit={this.handleSubmit}>
-          <Form.Item label="E-mail">
-            {getFieldDecorator('email', {
-              rules: [
-                {
-                  type: 'email',
-                  message: 'The input is not valid E-mail!'
-                },
-                {
-                  required: true,
-                  message: 'Please input your E-mail!'
-                }
-              ]
-            })(<Input />)}
-          </Form.Item>
-          <Form.Item
-            label={
-              <span>
-                Nickname&nbsp;
-                <Tooltip title="What do you want others to call you?">
-                  <Icon type="question-circle-o" />
-                </Tooltip>
-              </span>
-            }
-          >
-            {getFieldDecorator('nickname', {
-              rules: [
-                {
-                  required: true,
-                  message: 'Please input your nickname!',
-                  whitespace: true
-                }
-              ]
-            })(<Input />)}
-          </Form.Item>
-          <Form.Item label="Phone Number">
-            {getFieldDecorator('phone', {
-              rules: [
-                { required: true, message: 'Please input your phone number!' }
-              ]
-            })(
-              <Input addonBefore={prefixSelector} style={{ width: '100%' }} />
-            )}
-          </Form.Item>
-          <Form.Item
-            label="Captcha"
-            extra="We must make sure that your are a human."
-          >
-            <Row gutter={8}>
-              <Col span={12}>
-                {getFieldDecorator('captcha', {
-                  rules: [
-                    {
-                      required: true,
-                      message: 'Please input the captcha you got!'
-                    }
-                  ]
-                })(<Input />)}
-              </Col>
-              <Col span={12}>
-                <Button>Get captcha</Button>
-              </Col>
-            </Row>
-          </Form.Item>
-          <Form.Item {...tailFormItemLayout}>
-            {getFieldDecorator('agreement', {
-              valuePropName: 'checked'
-            })(
-              <Checkbox>
-                I have read the <a href="holo">agreement</a>
-              </Checkbox>
-            )}
-          </Form.Item>
-          <Form.Item {...tailFormItemLayout}>
-            <Button type="primary" htmlType="submit">
-              Register
-            </Button>
-          </Form.Item>
-        </Form>
-      </React.Fragment>
-    );
+const ContactForm = Form.create({
+  onValuesChange(props, values) {
+    props.addI(values);
   }
-}
+})(props => {
+  const [mails, setMails] = useState([]); // array de autocompletado de correos
+  // eslint-disable-next-line no-unused-vars
+  const [okCaptcha, setOkCaptcha] = useState(false); // valida si el captcha es correcto
+  const { getFieldDecorator } = props.form;
 
-const WrappedRegistrationForm = Form.create({ name: 'register' })(
-  RegistrationForm
-);
+  const handleSubmit = e => {
+    e.preventDefault();
+    console.log('Received values of form: ');
+  };
 
-export default WrappedRegistrationForm;
+  const onCaptha = value => {
+    setOkCaptcha(value);
+  };
 
-// // Others
-// import { Col, Row, Button } from 'antd';
+  // sirve para autocompletado en el input de correo
+  const handleSearch = value => {
+    let result;
+    if (!value || value.indexOf('@') >= 0) {
+      result = [];
+    } else {
+      result = ['gmail.com', 'hotmail.com', 'outlook.com', 'yahoo.com.mx'].map(
+        domain => `${value}@${domain}`
+      );
+    }
+    setMails(result);
+  };
 
-// function ContactForm() {
-//   return (
-//     <React.Fragment>
-//       <h1>Haz tu cita</h1>
-//     </React.Fragment>
-//   );
-// }
+  const formItemLayout = {
+    labelCol: {
+      xs: { span: 24 },
+      sm: { span: 8 }
+    },
+    wrapperCol: {
+      xs: { span: 24 },
+      sm: { span: 16 }
+    }
+  };
+  const tailFormItemLayout = {
+    wrapperCol: {
+      xs: {
+        span: 24,
+        offset: 0
+      },
+      sm: {
+        span: 16,
+        offset: 8
+      }
+    }
+  };
 
-// export default ContactForm;
+  const children = mails.map(email => (
+    <AutoComplete.Option key={email}>{email}</AutoComplete.Option>
+  ));
+
+  return (
+    <Form {...formItemLayout} onSubmit={handleSubmit}>
+      <Form.Item label="E-mail">
+        {getFieldDecorator('correo', {
+          rules: [
+            {
+              type: 'email',
+              message: 'No es un E-mail válido!'
+            },
+            {
+              required: true,
+              message: 'Por favor ingresa tu E-mail'
+            }
+          ]
+        })(
+          <AutoComplete onSearch={handleSearch} placeholder="input here">
+            {children}
+          </AutoComplete>
+        )}
+      </Form.Item>
+      <Form.Item label="Empresa o negocio">
+        {getFieldDecorator('enombre', {
+          rules: [
+            {
+              required: false,
+              whitespace: true
+            }
+          ]
+        })(<Input />)}
+      </Form.Item>
+      <Form.Item label="Nombre">
+        {getFieldDecorator('pnombre', {
+          rules: [
+            {
+              required: true,
+              message: 'Por favor ingresa tu nombre',
+              whitespace: true
+            }
+          ]
+        })(<Input />)}
+      </Form.Item>
+      <Form.Item
+        label={
+          <span>
+            Motivo de la cita&nbsp;
+            <Tooltip title="Ingresa para que requieres asesoría, dependiendo de los detalles será el la especialización del asesor que te atenderá">
+              <Icon type="question-circle-o" />
+            </Tooltip>
+          </span>
+        }
+      >
+        {getFieldDecorator('motivo', {
+          rules: [
+            {
+              required: true,
+              message: 'Por favor ingresa un motivo',
+              whitespace: true
+            }
+          ]
+        })(<Input.TextArea />)}
+      </Form.Item>
+      <Form.Item label="Captcha">
+        <SimpleCaptcha handleCaptha={onCaptha} />
+      </Form.Item>
+      <Form.Item {...tailFormItemLayout}>
+        {getFieldDecorator('agreement', {
+          valuePropName: 'checked'
+        })(
+          <Checkbox>
+            He leído el <a href="#holo">acuerdo</a>
+          </Checkbox>
+        )}
+      </Form.Item>
+      <Form.Item {...tailFormItemLayout}>
+        <Button type="danger" block htmlType="submit">
+          Registrar
+        </Button>
+      </Form.Item>
+    </Form>
+  );
+});
+
+const mapStateToProps = reducers => {
+  return {
+    formDate: reducers.formDateReducer
+  };
+};
+
+const mapDispatchToProps = dispatch => ({
+  addI: value => dispatch(addInput(value))
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ContactForm);
+
+// fecha
+// hora
+// enombre
+// pnombre
+// motivo
+// cargo
+// tipoa
+// correo

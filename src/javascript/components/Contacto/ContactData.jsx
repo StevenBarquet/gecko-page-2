@@ -27,16 +27,36 @@ const ContactData = () => {
       </Row>
       <Row>
         <Col align="middle" sm={6}>
-          <img src={whats} alt="whats app logo" width="60px" />
+          <img
+            className="dataLogo"
+            src={whats}
+            alt="whats app logo"
+            width="60px"
+          />
         </Col>
         <Col align="middle" sm={6}>
-          <img src={fb} alt="whats app logo" width="60px" />
+          <img
+            className="dataLogo"
+            src={fb}
+            alt="whats app logo"
+            width="60px"
+          />
         </Col>
         <Col align="middle" sm={6}>
-          <img src={insta} alt="whats app logo" width="60px" />
+          <img
+            className="dataLogo"
+            src={insta}
+            alt="whats app logo"
+            width="60px"
+          />
         </Col>
         <Col align="middle" sm={6}>
-          <img src={gmail} alt="whats app logo" width="60px" />
+          <img
+            className="dataLogo"
+            src={gmail}
+            alt="whats app logo"
+            width="60px"
+          />
         </Col>
       </Row>
       <Row className="footer-phone">
@@ -44,7 +64,7 @@ const ContactData = () => {
           <span>
             <Icon type="phone" />
           </span>
-          5533700670 <span>|</span> 555555555
+          5533700670 <span>|</span> 5588834593
         </Col>
         <Col sm={12}>
           <span>

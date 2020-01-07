@@ -48,7 +48,10 @@
 /* -------------------------tema---------------------------- */
 @colorPrimary: #ffb71b;
 @colorPrimaryLigth: #ffcc5e;
+@colorDanger: #3ab415;
+@colorDangerLigth: #56d42f;
 
+//--steps
 .ant-steps-item-process .ant-steps-item-icon{
   background: @colorPrimary;
 }
@@ -73,6 +76,7 @@
 .ant-steps .ant-steps-item:not(.ant-steps-item-active):not(.ant-steps-item-process) > .ant-steps-item-container[role="button"]:hover .ant-steps-item-icon .ant-steps-icon{
   color: @colorPrimary;
 }
+//--Boton primario
 .ant-btn-primary:hover, .ant-btn-primary:focus{
   color:rgb(255, 255, 255);
   background-color:@colorPrimaryLigth;
@@ -83,12 +87,25 @@
   background-color:@colorPrimary;
   border-color:@colorPrimary;
 }
+//--Boton Danger
+.ant-btn-danger:hover, .ant-btn-danger:focus{
+  color:rgb(255, 255, 255);
+  background-color:@colorDangerLigth;
+  border-color:@colorDangerLigth;
+}
+.ant-btn-danger {
+  color:rgb(255, 255, 255);
+  background-color:@colorDanger;
+  border-color:@colorDanger;
+}
+//--listas
 .ant-list{
   color: rgb(255, 255, 255);
 }
 .ant-list-header{
   color: @colorPrimary;
 }
+//--Form texts
 .ant-form-item-label > label{
   color: #ffffff;
 }
@@ -98,6 +115,7 @@
 .ant-form-explain, .ant-form-extra{
   color: #ffffff;
 }
+//---------Otros--------
 h1{
   font-size: 46px;
   color: #ffffff;
@@ -293,6 +311,11 @@ font-family: 'Roboto Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Gra
   margin-left: auto;
   /* border: 2px solid #fd9155; */
 }
+.captchaField{
+  background: #ffffff;
+  width: 150px;
+  border-radius: 3px;
+}
 /* ---------------------Grow---------------------- */
 .grow-img-container{
   width: 260px;
@@ -385,6 +408,13 @@ font-family: 'Roboto Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Gra
   font-size: 60px;
   font-weight: bold;
   font-family: 'Roboto Condensed Regular','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+// --------------------------------------Contact Data----------------------------------------
+.dataLogo{
+  cursor: pointer;
+  &:hover{
+    transform: scale(1.05);
+  }
 }
 //---------------------------------------Footer--------------------
 .footer-box{
